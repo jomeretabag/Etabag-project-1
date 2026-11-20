@@ -124,13 +124,16 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 400; }
 .about-copy h2 { max-width: 530px; margin: 0 0 20px; font-size: 39px; }
 .about-copy > p { max-width: 535px; color: #70726b; font-size: 12px; line-height: 1.9; }
 .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 535px; margin: 22px 0; }
-.about-facts div { display: flex; flex-direction: column; gap: 7px; padding: 14px 16px; background: #eeeee7; }
-.about-facts span { color: #85877e; font-size: 8px; font-weight: 700; letter-spacing: 1px; }
-.about-facts b { font-size: 11px; font-weight: 600; }
-.expertise { display: grid; grid-template-columns: 125px 1fr; padding-block: 19px; margin: 23px 0; border-top: 1px solid #e4e3dc; border-bottom: 1px solid #e4e3dc; }
-.expertise > span { padding-top: 3px; color: #888a81; font-size: 8px; font-weight: 700; letter-spacing: 1px; }
-.expertise div { display: flex; flex-wrap: wrap; gap: 10px 22px; }
-.expertise b { font-size: 10px; font-weight: 600; }
+.about-facts .fact-card { position: relative; min-height: 108px; display: flex; flex-direction: column; justify-content: flex-end; gap: 7px; overflow: hidden; padding: 18px 18px 16px; border: 1px solid #dde0d2; background: linear-gradient(135deg, #f4f4ec 0%, #e8eadf 100%); }
+.about-facts .fact-card:last-child { background: linear-gradient(135deg, #edf0df 0%, #dfe5d1 100%); }
+.about-facts .fact-card > span:not(.fact-number) { color: #85877e; font-size: 8px; font-weight: 700; letter-spacing: 1px; }
+.about-facts b { font-size: 11px; font-weight: 700; }
+.fact-number { position: absolute; top: 12px; right: 14px; color: #aeb79b; font-family: var(--serif); font-size: 24px; font-style: italic; }
+.expertise { display: grid; grid-template-columns: 125px 1fr; align-items: center; gap: 12px; padding-block: 19px; margin: 23px 0; border-top: 1px solid #e4e3dc; border-bottom: 1px solid #e4e3dc; }
+.expertise > span { color: #888a81; font-size: 8px; font-weight: 700; letter-spacing: 1px; }
+.interest-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.interest-list span { display: inline-flex; align-items: center; min-height: 30px; padding: 7px 10px 7px 12px; border: 1px solid #dde0d3; border-radius: 999px; background: #f8f7f1; color: #5f6456; font-size: 9px; font-weight: 700; }
+.interest-list span::before { content: ""; width: 5px; height: 5px; margin-right: 7px; border-radius: 50%; background: #9bab78; box-shadow: 0 0 0 3px #9bab7818; }
 
 .contact-section { position: relative; overflow: hidden; background: #333a2e; color: #f5f4ed; }
 .contact-inner { position: relative; padding-block: 83px 91px; }
